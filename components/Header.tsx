@@ -1,10 +1,14 @@
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
+import logo from "../public/icon/devil.png";
 
 export default function Header() {
   return (
    <>
   <header className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-800 fixed top-0 right-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
-    <section className="text-2xl font-bold text-gray-800 dark:text-white">logo</section>
+    <section className="text-2xl font-bold text-gray-800 dark:text-white">
+      <Image src={logo} alt="Sasindu Malshan" width={50} height={50} />
+    </section>
     <section className="flex gap-8">
       <li className="list-none">
         <a 

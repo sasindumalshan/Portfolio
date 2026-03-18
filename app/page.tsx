@@ -1,5 +1,6 @@
 import AboutMe from "@/components/AboutMe";
 import ContactForm from "@/components/ContactForm";
+import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import ThemeToggle from "@/components/ThemeToggle";
 import TechStack from "@/components/aboutMe/TechStack";
@@ -10,7 +11,7 @@ export default function Home() {
 
     return (
       <>
-        {/* <Header /> */}
+        <Header />
         <main className="mt-16 ">
           <HomeSection />
           <AboutMe />

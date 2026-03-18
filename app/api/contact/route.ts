@@ -1,48 +1,63 @@
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
+// import { NextResponse } from "next/server";
+// import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
+
+// export async function POST(request: Request) {
+//   try {
+//     const { name, email, subject, message } = await request.json();
+
+//     // Basic validation
+//     if (!name || !email || !message) {
+//       return NextResponse.json(
+//         { status: "error", message: "Missing required fields" },
+//         { status: 400 }
+//       );
+//     }
+
+//   } catch (error) {
+//   }
+// }
+
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
     const { name, email, subject, message } = await request.json();
 
-    // Basic validation
     if (!name || !email || !message) {
       return NextResponse.json(
-        { status: "error", message: "Missing required fields" },
+        { message: "Missing fields" },
         { status: 400 }
       );
     }
 
-    // Send email
-    await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
-      to: [process.env.CONTACT_RECEIVER_EMAIL!],
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
       replyTo: email,
-      subject: subject || `New message from ${name}`,
+      subject: subject || "New Contact Message",
       html: `
-        <div style="font-family: Arial, sans-serif;">
-          <h2>New Contact Message</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
-        </div>
+        <h3>New Message</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p>${message}</p>
       `,
     });
 
-    return NextResponse.json({
-      status: "success",
-      message: "Email sent successfully",
-    });
+    return NextResponse.json({ success: true });
 
-  } catch (error) {
-    console.error("Email error:", error);
-
-    return NextResponse.json(
-      { status: "error", message: "Failed to send email" },
-      { status: 500 }
-    );
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ success: false }, { status: 500 });
   }
 }
