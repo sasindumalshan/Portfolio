@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Binary_img from "@/public/bg-img/INRODhanumaiMinumai-ezgif.com-video-to-webp-converter.webp";
 import profile from "@/public/bg-img/PROFILE.png";
 import CvDownloadButton from "./CvDownloadButton";
 import AutoSmoothCarousel from "./home/ImageCarousel";
@@ -13,22 +12,6 @@ import Icon_Devil from "@/public/icon/devil.png";
 export default function HomeSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 overflow-hidden">
-      {/* Enhanced Background with Gradient Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src={Binary_img}
-            alt="Binary background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        {/* Animated gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
 
       <div className="relative z-10 max-w-7xl w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -90,7 +73,7 @@ export default function HomeSection() {
             <div className="relative group animate-float">
               {/* Glowing ring effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              
+
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                 <Image
                   src={profile}
@@ -118,85 +101,86 @@ export default function HomeSection() {
 
             {/* YouTube Promo Card */}
             <div>
-            
+
               <a
-              href="https://youtube.com/@devil-gc6nn?si=MHfRj7B9JpUuiYtA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-md group transform hover:scale-105 transition-all duration-300"
-            >
-              <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10 rounded-2xl p-6 shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 overflow-hidden">
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="relative z-10">
-                  {/* Channel Header */}
-                  <div className="flex items-center gap-4 mb-5">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl blur-md opacity-50"></div>
-                      <Image
-                        src={Icon_Devil.src}
-                        alt="Devil Icon"
-                        width={72}
-                        height={72}
-                        className="relative rounded-xl border-2 border-white/20"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
+                href="https://youtube.com/@devil-gc6nn?si=MHfRj7B9JpUuiYtA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-md group transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10 rounded-2xl p-6 shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 overflow-hidden">
+                  {/* Animated background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    {/* Channel Header */}
+                    <div className="flex items-center gap-4 mb-5">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl blur-md opacity-50"></div>
                         <Image
-                          src={Icon_Youtube.src}
-                          alt="YouTube"
-                          width={32}
-                          height={32}
-                          className="animate-pulse"
+                          src={Icon_Devil.src}
+                          alt="Devil Icon"
+                          width={72}
+                          height={72}
+                          className="relative rounded-xl border-2 border-white/20"
                         />
-                        <h3 className="text-2xl font-bold text-white">Devil</h3>
                       </div>
-                      <p className="text-sm text-gray-400">Creative Coding & Tech</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <span className="inline-flex items-center gap-1 bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-1 rounded-full">
-                          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                          Live Channel
-                        </span>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <Image
+                            src={Icon_Youtube.src}
+                            alt="YouTube"
+                            width={32}
+                            height={32}
+                            className="animate-pulse"
+                          />
+                          <h3 className="text-2xl font-bold text-white">Devil</h3>
+                        </div>
+                        <p className="text-sm text-gray-400">Music Producer | DJ</p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className="inline-flex items-center gap-1 bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-1 rounded-full">
+                            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                            Live Channel
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                    <span className="text-sm text-gray-400">Latest Video</span>
 
-                  {/* Video Embed */}
-                  <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-white/10 shadow-lg group-hover:border-white/20 transition-colors">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/y72Kcu2NGmY?si=vc-bVUargy-sM-AV"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
-                  </div>
+                    {/* Video Embed */}
+                    <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-white/10 shadow-lg group-hover:border-white/20 transition-colors">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/y72Kcu2NGmY?si=vc-bVUargy-sM-AV"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                    </div>
 
-                  {/* Subscribe CTA */}
-                  <div className="mt-5 text-center">
-                    <button className="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transform group-hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                      </svg>
-                      Subscribe Now
-                    </button>
+                    {/* Subscribe CTA */}
+                    <div className="mt-5 text-center">
+                      <button className="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transform group-hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        Subscribe Now
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Stats Section */}
-        {/* <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {/* Stats Section */}
+          {/* <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
             { number: "50+", label: "Projects Completed" },
             { number: "5+", label: "Years Experience" },
@@ -216,7 +200,7 @@ export default function HomeSection() {
             </div>
           ))}
         </div> */}
-      </div>
+        </div>
       </div>
 
       <style jsx>{`

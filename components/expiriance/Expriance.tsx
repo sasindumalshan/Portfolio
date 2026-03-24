@@ -96,9 +96,9 @@ function ExperienceCard({
         </svg>
       </div>
 
-      <section className="bg-[#171717] backdrop-blur-sm 
+      <section className="bg-[#171717]/60 backdrop-blur-md 
         rounded-2xl p-6 md:p-8 border-2 border-white/10
-        hover:border-emerald-500/50 hover:bg-[#1f1f1f]
+        hover:border-emerald-500/50 hover:bg-[#1f1f1f]/80
         hover:scale-[1.01] hover:shadow-2xl hover:shadow-black/40
         transition-all duration-500 ease-out overflow-hidden">
         

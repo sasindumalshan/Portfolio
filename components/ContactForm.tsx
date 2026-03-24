@@ -226,7 +226,7 @@ export default function ContactForm() {
 
                 {/* Right - Form */}
                 <section className="lg:w-1/2">
-                    <div className="bg-gradient-to-br from-[#1f1f1f] to-[#181818] p-6 md:p-10 rounded-3xl shadow-2xl border border-white/5">
+                    <div className="bg-gradient-to-br from-[#1f1f1f]/60 to-[#181818]/60 backdrop-blur-md p-6 md:p-10 rounded-3xl shadow-2xl border border-white/10">
                         {/* Success Message */}
                         {showSuccess && (
                             <div className="mb-6 p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 text-sm animate-fade-in">
