@@ -11,7 +11,7 @@ import Icon_Devil from "@/public/icon/devil.png";
 
 export default function HomeSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 overflow-hidden">
 
       <div className="relative z-10 max-w-7xl w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

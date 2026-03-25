@@ -127,21 +127,21 @@ export default function ContactForm() {
     };
 
     const socialLinks = [
-        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", alt: "GitHub", href: "#" },
-        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-plain.svg", alt: "Facebook", href: "#" },
-        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg", alt: "LinkedIn", href: "#" },
-        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg", alt: "Twitter", href: "#" },
+        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", alt: "GitHub", href: "https://github.com/sasindumalshan" },
+        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-plain.svg", alt: "Facebook", href: "https://www.facebook.com/sasindu.malshan.12" },
+        { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/sasindu-malshan-738790267" },
+        { icon: "https://static.cdnlogo.com/logos/w/29/whatsapp-icon.svg", alt: "Phone", href: "https://wa.me/+94770659786?text=Hello!%20I%20came%20across%20your%20portfolio%20and%20I%E2%80%99m%20really%20interested%20in%20your%20work.%20Is%20this%20a%20good%20time%20to%20connect%20and%20discuss%20further%3F" },
     ];
 
     const contactInfo = [
-        { icon: Image_Gmail_BW, text: "sasindumalshan@gmail.com", alt: "Email" },
-        { icon: Image_WhatsApp_BW, text: "+94 77 123 4567", alt: "WhatsApp" },
+        { icon: Image_Gmail_BW, text: "sasindu.malshan2001@gmail.com", alt: "Gmail" },
+        { icon: Image_WhatsApp_BW, text: "+94 77 0659786", alt: "WhatsApp" },
         { icon: Image_Map_BW, text: "Galle, Sri Lanka", alt: "Location" },
-        { icon: Image_Phone_BW, text: "+94 77 123 4567", alt: "Phone" },
+        { icon: Image_Phone_BW, text: "+94 77 0659786", alt: "Phone" },
     ];
 
     return (
-        <div className="w-full px-4 md:px-10 lg:px-20 py-12">
+        <div id="contact" className="w-full px-4 md:px-10 lg:px-20 py-12 bg-[#181818]/80 mt-8">
             {/* Title */}
             <div className="mb-12">
                 <div className="border-t-2 border-white w-20 mb-3"></div>
@@ -176,7 +176,7 @@ export default function ContactForm() {
                                 <a
                                     key={index}
                                     href={social.href}
-                                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-110 cursor-pointer"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -194,7 +194,7 @@ export default function ContactForm() {
                             >
                                 <Image src={Image_Gmail} alt="Gmail" width={24} height={24} />
                             </a>
-                        
+
                         </div>
                     </div>
 
@@ -248,9 +248,8 @@ export default function ContactForm() {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
-                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${
-                                        errors.name ? "border-red-500" : "border-white/20"
-                                    } focus:border-white py-3 outline-none transition-colors duration-300`}
+                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${errors.name ? "border-red-500" : "border-white/20"
+                                        } focus:border-white py-3 outline-none transition-colors duration-300`}
                                     type="text"
                                     placeholder="Enter your name *"
                                 />
@@ -265,9 +264,8 @@ export default function ContactForm() {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${
-                                        errors.email ? "border-red-500" : "border-white/20"
-                                    } focus:border-white py-3 outline-none transition-colors duration-300`}
+                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${errors.email ? "border-red-500" : "border-white/20"
+                                        } focus:border-white py-3 outline-none transition-colors duration-300`}
                                     type="email"
                                     placeholder="Your email address *"
                                 />
@@ -282,9 +280,8 @@ export default function ContactForm() {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleInputChange}
-                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${
-                                        errors.subject ? "border-red-500" : "border-white/20"
-                                    } focus:border-white py-3 outline-none transition-colors duration-300`}
+                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${errors.subject ? "border-red-500" : "border-white/20"
+                                        } focus:border-white py-3 outline-none transition-colors duration-300`}
                                     type="text"
                                     placeholder="Subject *"
                                 />
@@ -299,9 +296,8 @@ export default function ContactForm() {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
-                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${
-                                        errors.message ? "border-red-500" : "border-white/20"
-                                    } focus:border-white py-3 outline-none resize-none transition-colors duration-300`}
+                                    className={`w-full bg-transparent text-white placeholder:text-white/40 border-b-2 ${errors.message ? "border-red-500" : "border-white/20"
+                                        } focus:border-white py-3 outline-none resize-none transition-colors duration-300`}
                                     rows={5}
                                     placeholder="Write me a message *"
                                 ></textarea>

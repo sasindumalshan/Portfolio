@@ -23,7 +23,7 @@ const AboutMe = () => {
     }
 
     return (
-        <section className="w-full px-4 md:px-10 lg:px-20">
+        <section id="about" className="w-full px-4 md:px-10 lg:px-20">
             <div className="border-t-2 border-white w-20 mb-2"></div>
             <h1 className="font-semibold text-white text-3xl md:text-4xl">
                 About Me

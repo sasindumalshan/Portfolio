@@ -426,7 +426,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   const gradLabel = `${L_FROM[theme.primary]} ${L_TO[theme.secondary]}`;
 
   return (
-    <section className="relative min-h-screen overflow-hidden font-poppins px-4 py-20 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090B]/0 via-[#09090B]/70 via-[#09090B] via-[#09090B]/70 to-[#09090B]/0">
+    <section id="experience" className="relative min-h-screen overflow-hidden font-poppins px-4 py-20 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090B]/0 via-[#09090B]/70 via-[#09090B] via-[#09090B]/70 to-[#09090B]/0">
       <div className="relative z-10 mx-auto max-w-5xl">
 
         {/* ── Section Header ── */}

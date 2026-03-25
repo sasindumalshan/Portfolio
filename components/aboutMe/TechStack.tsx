@@ -109,7 +109,7 @@ const TechStack = () => {
     }, []);
 
     return (
-        <section className="w-full px-4 md:px-10 lg:px-20 mt-20">
+        <section id='tech-stack' className="w-full px-4 md:px-10 lg:px-20 mt-20">
             <div className="flex flex-col lg:flex-row gap-8">
 
                 {/* Left Sidebar */}

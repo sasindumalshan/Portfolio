@@ -48,7 +48,7 @@ function EducationCard({
   setIsPopupOpen: (value: boolean) => void;
 
 }) {
-  
+
 
   const statusText = status === "COMPLETED" ? "Completed" : status === "PENDING" ? "Pending" : "Discontinued";
   const theme = STATUS[status];
@@ -65,7 +65,7 @@ function EducationCard({
       {/* Subtle shine effect on hover */}
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700`}>
         <div className={`absolute inset-0 bg-gradient-to-tr ${theme.accent} opacity-5`} />
-        <div 
+        <div
           className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent"
           style={{
             transform: isHovered ? 'translateX(0%)' : 'translateX(-100%)',
@@ -100,7 +100,7 @@ function EducationCard({
         {/* Animated divider line */}
         <div className="relative mb-5 overflow-hidden h-[3px]">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600/30 to-transparent" />
-          <div 
+          <div
             className={`h-full bg-gradient-to-r ${theme.accent} rounded-full shadow-lg`}
             style={{
               width: isHovered ? '100%' : '0%',
@@ -113,7 +113,7 @@ function EducationCard({
         {/* Details section */}
         <section className="flex flex-col gap-3.5 pl-4 py-2 border-l-2 border-slate-600/40
           group-hover:border-slate-500/60 transition-all duration-500">
-          
+
           <p className="text-slate-300 flex items-start gap-3 group-hover:text-white transition-colors duration-300 leading-relaxed">
             <Image src={SchoolIcon} alt="School" width={20} height={20} className="mt-1 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="flex-1 text-sm font-medium">{institution}</span>
@@ -194,7 +194,7 @@ export default function Education() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="w-full px-4 md:px-10 lg:px-20 mt-20">
+    <section id="education" className="w-full px-4 md:px-10 lg:px-20 mt-20">
       {/* Header */}
       <div className="mb-12">
         <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full mb-4 shadow-lg shadow-blue-500/50"></div>
@@ -206,7 +206,7 @@ export default function Education() {
         </p>
       </div>
       {isPopupOpen && <EducationViewPopup onClose={() => setIsPopupOpen(false)} />}
-      
+
       {/* Cards Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {educationData.map((education, index) => (

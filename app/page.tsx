@@ -175,10 +175,10 @@ export default function Home() {
         <ExperienceSection items={myExperience} title="MY EXPERIENCE" />
         <TechStack />
         <ContactForm />
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
 
       </main>
-      <footer className="bg-[#181818]/80 backdrop-blur-md p-4 text-center text-white mt-8 border-t border-white/10">
+      <footer className="bg-[#181818]/80 backdrop-blur-md p-4 text-center text-white border-t border-white/10">
         <p>© {new Date().getFullYear()} Sasindu Malshan. All rights reserved.</p>
       </footer>
     </>
